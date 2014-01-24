@@ -1,0 +1,160 @@
+/*--------------------- CSS 3 ------------------------*/
+
+body {
+
+margin: 0;
+color: #4e226d;
+font-family: "SF Arborcrest Light", Helvetica, arial;
+/*font-weight: bold;*/
+background-image: url('../images/bg.jpg');
+background-repeat: repeat-x;
+}
+
+nav, section, footer {
+width: 960px; /* should change to % */
+margin: 0 auto;
+/*overflow: hidden;*/
+}
+
+nav:after, section:after, footer:after {
+	content: "";
+	display: block; 
+	clear: both;
+}
+
+/*--------------------- Header & Nav ------------------------*/
+
+header{
+	margin: 50px 0;	
+	background: -webkit-linear-gradient(180deg, #e2d7e9 0%, #a590b4 50%, #866f97 100%); /* For Safari */
+	background: -o-linear-gradient(180deg, #e2d7e9 0%, #a590b4 50%, #866f97 100%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(180deg, #e2d7e9 0%, #a590b4 50%, #866f97 100%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(180deg, #e2d7e9 0%, #a590b4 50%, #866f97 100%); /* Standard syntax */	
+	border: 1px #b3a0c0 solid;
+	
+}
+
+nav ul { position: relative; float: left; padding-left: 230px; margin: 0px; }
+nav li {
+	float: left;
+	list-style-type: none;
+}
+nav li a {
+	display: block;
+	padding: 20px;
+	padding-top: 30px;
+	margin-right: 70px;
+	color: #4e226d;
+	text-decoration: none;
+	font-size: 30px;
+}
+nav li:first-of-type {
+	position: absolute; top: -40px; left: 0px;
+	width: 150px; height: 150px; 
+	background: url('../images/logo.gif') no-repeat center center;
+}
+nav li:first-of-type a {
+	width: 150px; height: 150px; padding: 0px; 
+	text-indent: -9999px;
+}
+nav li:not(:first-of-type) a:hover {
+	background: #568d81;
+	height: 33px;
+}
+
+nav form { float: right; padding: 5px 0px; }
+nav form label { display: none; }
+nav form p { margin: 5px 0; }
+
+nav form input {
+	padding: 5px;
+	background: -webkit-linear-gradient(180deg, #ffffff 50%, #cccccc 100%); /* For Safari */
+	background: -o-linear-gradient(180deg, #ffffff 50%, #cccccc 100%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(180deg, #ffffff 50%, #cccccc 100%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(180deg, #ffffff 50%, #cccccc 100%); /* Standard syntax */
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #bfafca;	
+}
+
+nav form input:focus, textarea:focus {
+    outline: none; /*gets rid of the blue glow*/
+	background: -webkit-linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* For Safari */
+	background: -o-linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* Standard syntax */
+}
+
+[submit] {
+
+	background-color: #fefefe;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border: 5px solid #9d87ad;
+
+border-radius: 5px;
+background:#fefefe;
+
+}
+
+
+/*--------------------- CTA, About & Registration sections ------------------------*/
+
+
+#cta {
+	padding:0px;
+	margin-top: 40px;
+}
+
+
+/*
+#registration div, #registration form { width: 50%; float: left; }
+				
+h1, legend
+*/
+
+
+
+/*--------------------- typography & links ------------------------*/
+
+h1 {
+color: #4e226d;
+font-family: "SF Arborcrest Light" , Helvetica, arial;
+}
+
+p {
+font-size: 18px;
+}
+
+
+/*--------------------- Footer ------------------------*/
+
+
+footer{ 
+margin-top: 150px; 
+padding-left: 450px;
+}
+
+footer ul li {
+	float: left; padding: 5px;
+	border-right: solid 1px #ccc;
+	list-style-type: none;
+	color: #888888;
+}
+
+footer ul li:last-of-type { border-right: none; }
+
+
+footer a { color:#4e226d; }
+
+span { font-family: arial; }
+
+
+
+
+
+
+
+
