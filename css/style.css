@@ -1,71 +1,108 @@
 /*--------------------- CSS 3 ------------------------*/
+/*
+Color: Plum: #4e226d;
+	   Teal: #568d81;
+	   white: #fdfaff;
+	   light purple: #d3c8da;
+	   h1 on purple bg: #f5e9ff;
 
+Text:  25px: font-size: 1.563em;
+	   24px: font-size: 1.500em; 
+	   18px: font-size: 1.125em;
+	   
+	   
+box-shadow: 10px -3px 5px #d8d7cd; 
+*/
+
+/* --------------------------------------------- */
+/* -- STRUCTURE -- */
+/* --------------------------------------------- */
 body {
-
-margin: 0;
-color: #4e226d;
-font-family: "SF Arborcrest Light", Helvetica, arial;
-/*font-weight: bold;*/
-background-image: url('../images/bg.jpg');
-background-repeat: repeat-x;
+	margin: 0;
+	color: #4e226d;
+	font: 18px/24px "SF Arborcrest Light", Helvetica, arial;
+	/*font-weight: bold;*/
+	background-image: url('../images/bg.jpg');
+	background-repeat: repeat-x;
 }
 
-nav, section, footer {
-width: 960px; /* should change to % */
-margin: 0 auto;
-/*overflow: hidden;*/
+nav, 
+section, 
+footer ul { width: 960px; margin: 0 auto; }
+
+nav:after, 
+section:after, 
+footer:after { 
+	/*clearing all floating elements*/
+	content: ""; display: block; clear: both;
 }
 
-nav:after, section:after, footer:after {
-	content: "";
-	display: block; 
-	clear: both;
-}
-
-/*--------------------- Header & Nav ------------------------*/
-
-header{
-	margin: 50px 0;	
+/* -- Header & Nav -- */
+header{ /*--purple Nav gradient--*/
+	margin-top: 50px;
+	margin-bottom: 0px;	
 	background: -webkit-linear-gradient(180deg, #e2d7e9 0%, #a590b4 50%, #866f97 100%); /* For Safari */
 	background: -o-linear-gradient(180deg, #e2d7e9 0%, #a590b4 50%, #866f97 100%); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(180deg, #e2d7e9 0%, #a590b4 50%, #866f97 100%); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(180deg, #e2d7e9 0%, #a590b4 50%, #866f97 100%); /* Standard syntax */	
 	border: 1px #b3a0c0 solid;
-	
 }
 
-nav ul { position: relative; float: left; padding-left: 230px; margin: 0px; }
+nav ul { 
+	position: relative; 
+	float: left; 
+	padding-left: 200px;
+	margin: 0px;
+	height: 84px; 
+}
 nav li {
 	float: left;
 	list-style-type: none;
+	height: 84px; 
 }
 nav li a {
 	display: block;
-	padding: 20px;
+	padding-right: 50px;
+	padding-left:50px;
 	padding-top: 30px;
-	margin-right: 70px;
 	color: #4e226d;
 	text-decoration: none;
-	font-size: 30px;
+	font-size: 1.563em; /*25px*/
+	text-transform:uppercase;
 }
-nav li:first-of-type {
-	position: absolute; top: -40px; left: 0px;
+nav li:first-of-type { /*--Logo--*/
+	position: absolute; top: -35px; left: 0px;
 	width: 150px; height: 150px; 
-	background: url('../images/logo.gif') no-repeat center center;
+	background: url('../images/logoSmall.png') no-repeat center center;
 }
-nav li:first-of-type a {
-	width: 150px; height: 150px; padding: 0px; 
+nav li:first-of-type a { /*--Logo--*/
+	width: 100px; 
+	height: 150px; 
+	padding: 0px; 
 	text-indent: -9999px;
 }
-nav li:not(:first-of-type) a:hover {
+nav li:not(:first-of-type) a:hover { /*Why wont the gradient show?*/
 	background: #568d81;
-	height: 33px;
+	
+	background: -webkit-linear-gradient(180deg, #c7e2dc 0%, #8bb3aa 50%, #568d81 100%); /* For Safari */
+	background: -o-linear-gradient(180deg, #c7e2dc 0%, #8bb3aa 50%, #568d81 100%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(180deg, #c7e2dc 0%, #8bb3aa 50%, #568d81 100%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(180deg, #c7e2dc 0%, #8bb3aa 50%, #568d81 100%); /* Standard syntax */	
+	
+	/*border: 1px #8bb3aa solid;*/
+	height: 84px; 		
 }
-
-nav form { float: right; padding: 5px 0px; }
-nav form label { display: none; }
-nav form p { margin: 5px 0; }
-
+nav form { 
+	float: right; 
+	padding: 0px; 
+}
+nav form label { 
+	display: none; 
+}
+nav form p { 
+	margin: 5px 0; 
+	padding: 0px; 
+}
 nav form input {
 	padding: 5px;
 	background: -webkit-linear-gradient(180deg, #ffffff 50%, #cccccc 100%); /* For Safari */
@@ -78,7 +115,6 @@ nav form input {
 	border-radius: 5px;
 	border: 1px solid #bfafca;	
 }
-
 nav form input:focus, textarea:focus {
     outline: none; /*gets rid of the blue glow*/
 	background: -webkit-linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* For Safari */
@@ -87,69 +123,246 @@ nav form input:focus, textarea:focus {
 	background: linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* Standard syntax */
 }
 
-[submit] {
-
-	background-color: #fefefe;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	border: 5px solid #9d87ad;
-
-border-radius: 5px;
-background:#fefefe;
-
-}
 
 
-/*--------------------- CTA, About & Registration sections ------------------------*/
-
-
-#cta {
-	padding:0px;
-	margin-top: 40px;
-}
-
-
-/*
-#registration div, #registration form { width: 50%; float: left; }
-				
-h1, legend
-*/
-
-
-
-/*--------------------- typography & links ------------------------*/
+/* --------------------------------------------- */
+/* -- TYPOGRAPHY -- */
+/* --------------------------------------------- */
 
 h1 {
-color: #4e226d;
-font-family: "SF Arborcrest Light" , Helvetica, arial;
+ 	padding: 20px;
+	font-size: 1.3em; color: #f5e9ff;
+	background: #61397e;
+	
+	background: -webkit-linear-gradient(180deg, #aa96b9 0%, #61397e 50%, #4e226d 100%); /*For Safari */
+	background: -o-linear-gradient(180deg, #aa96b9 0%, #61397e 50%, #4e226d 100%); /*For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(180deg, #aa96b9 0%, #61397e 50%, #4e226d 100%); /*For Firefox 3.6 to 15 */
+	background: linear-gradient(180deg, #aa96b9 0%, #61397e 50%, #4e226d 100%); /*Standard syntax */	
+	
 }
 
-p {
-font-size: 18px;
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+
+p { padding-bottom: 20px; }
+
+
+
+/* --------------------------------------------- */
+/* -- CONTENT -- */
+/* --------------------------------------------- */
+
+/* -- CTA -- */
+#cta {
+	padding:0px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#cta p { padding: 0px; }
+
+
+/* -- WHY JOIN -- */
+#registration div h1 {
+	position: relative; left: -20px; top: -20px;
+ 	width: 110%; /* fallback if needed */
+  	width: calc(100% + 40px);
+ 	padding: 20px;
+	font-size: 2em; color: #f5e9ff; 
+	background: #61397e;
+	
+	background: -webkit-linear-gradient(180deg, #aa96b9 0%, #61397e 50%, #4e226d 100%); /*For Safari */
+	background: -o-linear-gradient(180deg, #aa96b9 0%, #61397e 50%, #4e226d 100%); /*For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(180deg, #aa96b9 0%, #61397e 50%, #4e226d 100%); /*For Firefox 3.6 to 15 */
+	background: linear-gradient(180deg, #aa96b9 0%, #61397e 50%, #4e226d 100%); /*Standard syntax */		
+}
+
+#registration div {
+	padding: 20px;
+	width: 39%;	
+	background: #fdfaff;
+}
+
+#registration div p:last-of-type { /* last p */
+	padding-top: 15px;
+	padding-bottom: 13px;
+	padding-left: 65px;
+	font-size: 1.2em;
 }
 
 
-/*--------------------- Footer ------------------------*/
 
-
-footer{ 
-margin-top: 150px; 
-padding-left: 450px;
+/* -- REGISTRATION FORM -- */
+#registration div, #registration form { 
+	float: left; 
+	margin-bottom: 50px; /*pushed the footer down lower*/
 }
 
+#registration form {
+	background: #d3c8da;
+	box-shadow: 10px -3px 5px #d8d7cd;
+	padding: 20px;
+	width: 61%; 
+}
+				
+#registration legend {
+	border-bottom: solid 1px #a690b6;
+	width: 100%; /*width for line*/
+	font-size: 1.5em;
+}
+
+#registration form p {
+	font-size: 1.125em; /*18px*/
+	text-transform:uppercase;
+	padding-top: 30px;	/*padding between text fields*/
+	clear: both;
+}
+#registration form p label {
+	color: #7a5992;
+	padding-right: 15px;
+	padding-top: 10px;
+	float: left;
+}
+#registration form input {
+	padding: 13px; /*height of text field*/
+	margin: 0px;
+	background: -webkit-linear-gradient(180deg, #ffffff 50%, #cccccc 100%); /* For Safari */
+	background: -o-linear-gradient(180deg, #ffffff 50%, #cccccc 100%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(180deg, #ffffff 50%, #cccccc 100%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(180deg, #ffffff 50%, #cccccc 100%); /* Standard syntax */
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #bfafca;	
+	
+	float: right;
+}
+#registration form input:focus, textarea:focus {
+    outline: none; /*gets rid of the blue glow*/
+	background: -webkit-linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* For Safari */
+	background: -o-linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* Standard syntax */
+}
+
+
+/* ---- GROUP HOME PAGE ---- */
+/* -- PROFILES -- */
+
+#profiles, #calendar {
+	margin-top: 50px;
+	float: left; 
+	margin-bottom: 50px; /*pushed the footer down lower*/
+	box-shadow: 10px -3px 5px #d8d7cd;
+	background: #fdfaff;
+}
+
+#profiles {
+	margin-right: 40px;
+	width: 50%;
+	/*line-height:150%; /* spacing between letter lines*/
+	
+}
+#profiles ul {
+	padding: 20px;
+}
+#profiles ul li img {
+	padding-right: 20px;
+}
+#profiles ul li {
+	font-size: 1.500em; /*24pt*/
+	padding-bottom: 20px;
+}
+#profiles ul li a {
+	color: #568d81;
+}
+
+#profiles ul li:last-of-type {
+	padding-bottom: 0px;
+}
+
+/* -- CALENDAR -- */
+
+#calendar{
+	width: 45%;	
+}
+#calendar ul {
+	padding: 20px;
+}
+#calendar ul li img {
+	padding-right: 20px;
+}
+
+#calendar ul li {
+	font-size: 1.125em; /*18pt*/
+	padding-bottom: 20px;
+}
+#calendar ul li a {
+	color: #568d81;
+}
+#calendar ul li:last-of-type {
+	padding-bottom: 0px;
+}
+
+/* --------------------------------------------- */
+/* -- FORMS -- */
+/* --------------------------------------------- */
+
+[type=submit] { /* Login btn */
+	color: #7a5992;
+	font-size: .8em;
+	background: -webkit-linear-gradient(180deg, #ffffff 0%, #e3dbe8 100%); /* For Safari */
+	background: -o-linear-gradient(180deg, #ffffff 0%, #e3dbe8 100%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(180deg, #ffffff 0%, #e3dbe8 100%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(180deg, #ffffff 0%, #e3dbe8 100%); /* Standard syntax */
+	
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 5px;	/* "border-radius" always comes last when listing borders for all browser views */
+	
+	border: 1px solid #9d87ad;
+}
+
+#registration [type=submit] { /*submit btn for "create an account"*/
+	margin-top: 30px;
+	font-size: 1.1em;
+	padding-left: 35px; /*padding on each side of "submit"*/
+	padding-right: 35px;
+	background: -webkit-linear-gradient(180deg, #ffffff 0%, #e3dbe8 100%); /* For Safari */
+	background: -o-linear-gradient(180deg, #ffffff 0%, #e3dbe8 100%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(180deg, #ffffff 0%, #e3dbe8 100%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(180deg, #ffffff 0%, #e3dbe8 100%); /* Standard syntax */
+}
+
+
+/* --------------------------------------------- */
+/* -- FOOTER -- */
+/* --------------------------------------------- */
+
+footer{ 	
+	background: #ece0be;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
 footer ul li {
-	float: left; padding: 5px;
+	float: left; 
+	padding: 5px;
 	border-right: solid 1px #ccc;
 	list-style-type: none;
 	color: #888888;
 }
-
-footer ul li:last-of-type { border-right: none; }
-
-
-footer a { color:#4e226d; }
-
-span { font-family: arial; }
+footer ul li:last-of-type { 
+	border-right: none; 
+}
+footer a { 
+	color:#4e226d; 
+}
+footer span { 
+	font-family: arial; 
+	display: inline-block;
+}
 
 
 
