@@ -34,8 +34,16 @@ nav:after,
 section:after, 
 footer:after { 
 	/*clearing all floating elements*/
-	content: ""; display: block; clear: both;
+	content: ""; display: block; clear: both;	
 }
+
+/*
+#registration a:visited,
+#profiles a:visited, 
+#calendar a:visited,
+#lastResort a:visited { color: #a7dace; }
+*/
+
 
 /* -- Header & Nav -- */
 header{ /*--purple Nav gradient--*/
@@ -137,8 +145,7 @@ h1 {
 	background: -webkit-linear-gradient(180deg, #aa96b9 0%, #61397e 50%, #4e226d 100%); /*For Safari */
 	background: -o-linear-gradient(180deg, #aa96b9 0%, #61397e 50%, #4e226d 100%); /*For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(180deg, #aa96b9 0%, #61397e 50%, #4e226d 100%); /*For Firefox 3.6 to 15 */
-	background: linear-gradient(180deg, #aa96b9 0%, #61397e 50%, #4e226d 100%); /*Standard syntax */	
-	
+	background: linear-gradient(180deg, #aa96b9 0%, #61397e 50%, #4e226d 100%); /*Standard syntax */		
 }
 
 h2 {}
@@ -247,7 +254,6 @@ p { padding-bottom: 20px; }
 	background: linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* Standard syntax */
 }
 
-
 /* ---- GROUP HOME PAGE ---- */
 /* -- PROFILES -- */
 
@@ -267,17 +273,31 @@ p { padding-bottom: 20px; }
 }
 #profiles ul {
 	padding: 20px;
+	text-transform:uppercase;	
 }
+
 #profiles ul li img {
-	padding-right: 20px;
+	padding: 12px 20px 0px 0px;
+	float: left;
 }
 #profiles ul li {
 	font-size: 1.500em; /*24pt*/
 	padding-bottom: 20px;
+	height: 100px;
+	clear: both; /*add to clear section up at top of css*/
 }
+
 #profiles ul li a {
+	padding-top: 38px;
 	color: #568d81;
+	float: left;
+	text-decoration: none;
 }
+
+#profiles ul li:nth-child(2n) {
+	background: #f8f3fb;
+}
+
 
 #profiles ul li:last-of-type {
 	padding-bottom: 0px;
@@ -288,22 +308,90 @@ p { padding-bottom: 20px; }
 #calendar{
 	width: 45%;	
 }
+
+/*
+#calendar h1{
+	padding-right: 100px; adding to the already existing padding of the h1 on line 140 
+	float: left;
+}
+
+#calendar p{
+	float: right;	
+}
+*/
+
 #calendar ul {
 	padding: 20px;
 }
 #calendar ul li img {
 	padding-right: 20px;
+	float: left;
 }
 
-#calendar ul li {
-	font-size: 1.125em; /*18pt*/
-	padding-bottom: 20px;
+#calendar ul li {	
+	color: #9e80b5;
+	font-size: .9em;
+	padding: 10px 0px 20px 0px;
+	text-transform:uppercase;
+	clear: both;
+}
+#calendar ul li:nth-child(2n) {
+	background: #f8f3fb;
 }
 #calendar ul li a {
 	color: #568d81;
+	font-size: 1.3em;
+	text-transform:uppercase;
 }
 #calendar ul li:last-of-type {
 	padding-bottom: 0px;
+}
+#calendar span {
+	color: #4e226d;
+	font-size: 1.5em;
+	text-transform:uppercase;
+	display: inline-block;
+}
+
+
+/* -- LAST RESORT -- */
+
+#lastResort {
+	float: left;
+}
+
+#lastResort h1 {
+	color: #4e226d;
+	font-size: 1.5em;
+	padding: 20px 290px 20px 20px;
+	background: #fdfaff;	
+	border-bottom: solid 2px #4e226d;
+	box-shadow: 10px -3px 5px #d8d7cd;	
+}
+
+#lastResort ul li img {
+	padding: 20px 20px 0px 20px;
+	float: left;
+}
+#lastResort ul li {
+	clear: both;
+}
+
+#lastResort span {
+	display: inline-block;
+	text-transform:uppercase;
+	padding-top: 35px;
+}
+#lastResort ul li a { 
+	color: #568d81;
+	font-size: .8em;
+	text-transform:uppercase;
+	letter-spacing:1px;	
+}
+
+#lastResort ul li:last-of-type {
+	padding-bottom: 25px;
+	border-bottom: solid 2px #4e226d;
 }
 
 /* --------------------------------------------- */
@@ -326,7 +414,7 @@ p { padding-bottom: 20px; }
 }
 
 #registration [type=submit] { /*submit btn for "create an account"*/
-	margin-top: 30px;
+	margin-top: 27px;
 	font-size: 1.1em;
 	padding-left: 35px; /*padding on each side of "submit"*/
 	padding-right: 35px;
