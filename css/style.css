@@ -164,11 +164,15 @@ p { padding-bottom: 20px; }
 #breadcrumbs {
 	padding: 30px 0px 15px 0px;
 	overflow: hidden;
-	opacity: .3;
+	opacity: .4;
 }
 #breadcrumbs li {
+	list-style: none;
 	padding-left: 10px;
 	float: left;
+}
+#breadcrumbs li:first-of-type {
+	padding-left: 0px;
 }
 #breadcrumbs ul li a { 
 	color: #4e226d;
@@ -638,21 +642,22 @@ p { padding-bottom: 20px; }
 }
 
 #addEvent form {
+	/*position: relative;*/
 	padding: 20px;
-	/*width: 65%;*/
+	width: 66.5%;
 	float: left;
 }
 
 #addEvent form p{
 	font-size: .8em; 
 	text-transform:uppercase;
-	padding-top: 10px;	/*padding between text fields*/
-	clear: both;
-	
+	padding: 10px 0px 0px 0px;	/*padding between text fields*/
+	clear: both;	
 }
+
 #addEvent p label{
+	width: 15%;
 	color: #7a5992;
-	padding-right: 15px;
 	padding-top: 5px;
 	float: left;
 }
@@ -669,8 +674,6 @@ p { padding-bottom: 20px; }
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	border: 1px solid #bfafca;	
-	
-	float: right;
 }
 #addEvent form input:focus, textarea:focus {
     outline: none; /*gets rid of the blue glow*/
@@ -680,7 +683,12 @@ p { padding-bottom: 20px; }
 	background: linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* Standard syntax */
 }
 
+#addEvent form p:last-of-type{
+padding-top: 50px;
+	
+}
 #addEvent p img {
+	width: 31.5%;
 	padding-top: 20px;
 	float: left;
 }
