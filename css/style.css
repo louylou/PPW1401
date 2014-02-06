@@ -89,7 +89,7 @@ nav li:first-of-type a { /*--Logo--*/
 	padding: 0px; 
 	text-indent: -9999px;
 }
-nav li:not(:first-of-type) a:hover { /*Why wont the gradient show?*/
+nav li:not(:first-of-type) a:hover { 
 	background: #568d81;
 	
 	background: -webkit-linear-gradient(180deg, #c7e2dc 0%, #8bb3aa 50%, #568d81 100%); /* For Safari */
@@ -162,22 +162,36 @@ p { padding-bottom: 20px; }
 /* --------------------------------------------- */
 
 #breadcrumbs {
-	padding-top: 30px;
-	margin: 0px;
-	list-style: none; 
+	padding: 30px 0px 15px 0px;
 	overflow: hidden;
+	opacity: .3;
 }
 #breadcrumbs li {
 	padding-left: 10px;
 	float: left;
 }
-#breadcrumbs ul li a { /* doesnt work*/
+#breadcrumbs ul li a { 
 	color: #4e226d;
 	text-decoration: none; 
 	position: relative; 
 	display: block;
 	float: left;
 }
+
+.birthday {
+	/*background: blue;*/
+	background: url ('../images/cakeIcon.jpg') no-repeat left top;
+	/*position: absolute; left 0px; top 0px;	*/
+}
+.graduation {
+	background-image: url ('../images/hat.jpg');
+}
+.party {
+	background-image: url ('../images/hats.jpg');
+}
+.holiday {}
+
+
 
 /* -- CTA -- */
 #cta {
@@ -271,7 +285,7 @@ p { padding-bottom: 20px; }
 /* ---- GROUP HOME PAGE ---- */
 /* -- PROFILE LIST -- */
 
-#profileList, #calendar, #allEvents {
+#profileList, #calendar {
 	margin-top: 50px;
 	float: left; 
 	margin-bottom: 50px; /*pushed the footer down lower*/
@@ -280,101 +294,154 @@ p { padding-bottom: 20px; }
 }
 
 #profileList {
+	position: relative;
 	margin-right: 40px;
 	width: 50%;	
 }
-
-#profileList ul {
-	padding: 20px;
-	text-transform:uppercase;	
-}
-
-#profileList ul li img {
-	padding: 12px 20px 0px 0px;
-	float: left;
-}
+#profileList ul { text-transform:uppercase;	}
 #profileList ul li {
-	font-size: 1.500em; /*24pt*/
-	padding-bottom: 20px;
-	height: 100px;
-	clear: both;
+	position: relative; padding: 20px 20px 20px 110px;
+	font-size: 1.500em; /*24pt*/	
+}
+#profileList ul li:nth-child(2n) { background: #f8f3fb; }
+#profileList ul li img {
+	display: block; position: absolute; left: 15px; top: 15px;
+}
+#profileList ul li:after { content: ""; display: block; clear: both; }
+#profileList ul li a {
+	display: block;
+	padding: 25px 0px 15px 0px;
+	color: #568d81; text-decoration: none;
 }
 
-#profileList ul li a {
-	padding-top: 38px;
-	color: #568d81;
+/* -- Filters -- */
+#profileList ul:first-of-type, 
+#giftList ul:first-of-type,
+#allEvents p {
+	position: absolute; right: 0px; top: 0px;
+ 	padding: 20px 10px 10px 10px;
+	color: #fff;
+}
+
+#profileList ul:first-of-type li,
+#giftList ul:first-of-type li {
+	font-size: .8em;
+	padding: 0px 5px;
 	float: left;
+	background: none;
+	text-transform: uppercase;
+	letter-spacing: .02em;
+}
+#allEvents p:first-of-type {
+	padding-right: 130px;
+}
+#allEvents p {
+	font-size: .8em;
+	float: left;
+	background: none;
+	text-transform: uppercase;
+	letter-spacing: .02em;
+}
+#allEvents p:last-of-type {
+	padding-right: 20px;
+}
+
+
+/* -- Links -- */
+
+#profileList ul:first-of-type li a { padding: 0px; }
+
+#profileList ul:first-of-type li:first-of-type a {
+	 color: #4e226d;
+	 background: #dfcfec;
+	 -webkit-border-radius: 5px;
+	 -moz-border-radius: 5px;
+	 border-radius: 5px;
+	 border: 1px solid #bfafca;
+	 padding: 5px 5px 0px 5px;	 
+}
+#allEvents p a {
+	 color: #4e226d;
+	 background: #dfcfec;
+	 -webkit-border-radius: 5px;
+	 -moz-border-radius: 5px;
+	 border-radius: 5px;
+	 border: 1px solid #bfafca;
+	 padding: 8px 8px 5px 8px;
+	 text-decoration: none;	  
+}
+
+#profileList ul:first-of-type li:last-of-type a,
+#giftList ul:first-of-type li:last-of-type a {
+	color: #d4c5e1;	
 	text-decoration: none;
 }
 
-#profileList ul li:nth-child(2n) {
-	background: #f8f3fb;
-}
-
-
-#profileList ul li:last-of-type {
-	padding-bottom: 0px;
-}
 
 /* -- CALENDAR & All EVENTS PG-- */
 
 #calendar{
-	width: 45%;	
+	width: 45%;
+	position: relative;	
 }
 #allEvents {
-	margin: 0px;
-	width: 100%;
+	position: relative;
+	margin-bottom: 50px; /*pushed the footer down lower*/
+	box-shadow: 10px -3px 5px #d8d7cd;
+	background: #fdfaff;
 }
+#calendar p { padding-bottom:0px; }
 
-/*
-#calendar h1{
-	padding-right: 100px; adding to the already existing padding of the h1 on line 140 
-	float: left;
-}
-
-#calendar p{
-	float: right;	
-}
-*/
-
-#calendar ul, 
-#allEvents ul {
-	padding: 20px;
+#calendar p a{
+	position: absolute; right: 0px; top: 20px;
+ 	padding: 0px 10px 0px 0px;
+	color: #d4c5e1;
+	background: none;
+	text-decoration: none;
+	text-transform:uppercase;	
+	font-size: .8em;
+	letter-spacing: .02em;
 }
 #calendar ul li img, 
 #allEvents ul li img {
 	padding-right: 20px;
 	float: left;
+	display: block; position: absolute; left: 15px; top: 15px;
 }
-
 #calendar ul li, 
-#allEvents ul li {	
+#allEvents ul li {
+	position: relative; padding: 20px 20px 20px 100px;		
 	color: #9e80b5;
 	font-size: .9em;
-	padding: 10px 0px 20px 0px;
 	text-transform:uppercase;
-	clear: both;
 }
 #calendar ul li:nth-child(2n), 
 #allEvents ul li:nth-child(2n) {
 	background: #f8f3fb;
+
 }
 #calendar ul li a {
 	color: #568d81;
 	font-size: 1.3em;
 	text-transform:uppercase;
+	display: block;
+	padding: 0px;
+	color: #568d81; text-decoration: none;
 }
+
 #allEvents ul li a {
 	color: #4e226d;
 	font-size: 1.5em;
 	text-decoration: none;
 	text-transform:uppercase;
 }
-
 #calendar ul li:last-of-type,
 #allEvents ul li:last-of-type {
-	padding-bottom: 0px;
+	padding-bottom: 20px;
 }
+
+#calendar ul li:after { content: ""; display: block; clear: both; }
+
 #calendar span,
 #allEvents span {
 	color: #4e226d;
@@ -387,7 +454,9 @@ p { padding-bottom: 20px; }
 /* -- LAST RESORT -- */
 
 #lastResort {
+	width: 45%;
 	float: left;
+	margin-bottom: 50px; /*pushed the footer down lower*/
 }
 
 #lastResort h1 {
@@ -427,45 +496,55 @@ p { padding-bottom: 20px; }
 /* ---- USER PROFILE---- */
 /* --TOP OF PROFILE -- */
 
-#profileLikes {
+#profile {
 	background: #d3c8da;
-	height: 460px;  /*should I have this? */
 	border: solid 1px #b1a3ba;
-		   
+	position: relative;
 	box-shadow: 10px -3px 5px #d8d7cd;
 }
-#profileLikes h1 {
+#profile h1 {
 	text-transform:uppercase;
 }
-#profileLikes a { /*:first-child*/
+#profile > p:first-of-type {
 	color: #568d81;
 	padding: 20px;
 	letter-spacing: .046em;
 	float: left;
 }
-#profileLikes form {
-	float: left;
+#profile > p:nth-of-type(2) {
+	position: absolute; left: 0px; top: 0px;
+ 	padding: 380px 0px 0px 20px;
+	font-size: 1em; 
 }
-#profileLikes form p{
+#profile p a {
+	color: #568d81;
+	letter-spacing: .046em;
+}
+#profile form {
+	padding: 20px 20px 40px 0px;
+	/*width: 60%;*/
+	float: right;
+}
+#profile form p{
 	font-size: .8em; 
 	text-transform:uppercase;
 	padding-top: 10px;	/*padding between text fields*/
 	clear: both;
 }
-#profileLikes legend {
+#profile legend {
 	border-bottom: solid 1px #a690b6;
 	width: 100%; /*width for line*/
 	font-size: 1.5em;
 }
 
-#profileLikes p label{
+#profile p label{
 	color: #7a5992;
 	padding-right: 15px;
 	padding-top: 5px;
 	float: left;
 }
 
-#profileLikes form input {
+#profile form input {
 	padding: 10px; /*height of text field*/
 	margin: 0px;
 	background: -webkit-linear-gradient(180deg, #ffffff 50%, #cccccc 100%); /* For Safari */
@@ -480,7 +559,7 @@ p { padding-bottom: 20px; }
 	
 	float: right;
 }
-#profileLikes form input:focus, textarea:focus {
+#profile form input:focus, textarea:focus {
     outline: none; /*gets rid of the blue glow*/
 	background: -webkit-linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* For Safari */
 	background: -o-linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* For Opera 11.1 to 12.0 */
@@ -488,16 +567,15 @@ p { padding-bottom: 20px; }
 	background: linear-gradient(180deg, #ffffff 0%, #f8f3fb 100%); /* Standard syntax */
 }
 
-#profileLikes form p:last-of-type {
+#profile form p:last-of-type {
 	padding-top: 40px;
 }
 
 /* -- GIFT LIST -- */
 
 #giftList {
+	position: relative;
 	clear: both;
-	/*background: #fdfaff;*/
-	/*height: 460px;  /*should I have this? */
 	border-right: solid 1px #e3e1e4;	   
 	box-shadow: 10px -3px 5px #d8d7cd;
 	margin-bottom: 50px; /*pushed the footer down lower*/
@@ -505,38 +583,47 @@ p { padding-bottom: 20px; }
 #giftList h1 {
 	margin-top: 30px;
 }
-/*
+
+#giftList form {
+	position: absolute; right: 160px; top: -2px;
+ 	padding: 20px 10px 10px 10px;
+}
+
 #giftList table {
 	width: 100%;
-	display: inline-block;
+
 	color:#4e226d;
 	border: 1px solid #512670;
 	border-collapse: collapse;
-}*/
-/*
-#giftList table tr:nth-child(2n){
-	background: red; /*#f8f3fb;*/
-}
-*/
-
-#giftList table tr {
-	/*width: 33%;*/
 }
 
 #giftList table th {
-	padding: 8px;
+	text-align: left;
+	padding: 8px 0px 0px 5px;
 	font-size: 1.4em;
 	border: 1px solid #ac9ab9;
 	background: #d3c8da;
 }
+#giftList table th:first-of-type {
+	padding-left: 15px;
+}
 #giftList table td{
-	padding: 5px;
+	font-size: .9em;
+	text-transform: uppercase;
+	letter-spacing: .03em;
+	padding: 5px 0px 3px 5px;
 	border: 1px solid #dddddd;
 	background: #fdfaff;
+}
+#giftList table td:first-of-type {
+	padding-left: 15px;
 }
 
 #giftList table a{
 	color: #568d81;
+}
+#giftList table tr:nth-child(2n) {/*not working*/
+	background: #f8f3fb;
 }
 
 
