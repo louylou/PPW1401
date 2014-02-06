@@ -419,21 +419,23 @@ p { padding-bottom: 20px; }
 	font-size: .9em;
 	text-transform:uppercase;
 }
+
 #calendar ul li:nth-child(2n), 
 #allEvents ul li:nth-child(2n) {
 	background: #f8f3fb;
 
 }
 #calendar ul li a {
+	display: block;
 	color: #568d81;
 	font-size: 1.3em;
 	text-transform:uppercase;
-	display: block;
 	padding: 0px;
 	color: #568d81; text-decoration: none;
 }
 
 #allEvents ul li a {
+	display: block;
 	color: #4e226d;
 	font-size: 1.5em;
 	text-decoration: none;
