@@ -149,7 +149,12 @@ h1 {
 }
 
 h2 {}
-h3 {}
+h3 {
+	padding-left: 20px;
+	font-size: 1.2em;
+	color: #4e226d;
+	text-transform: uppercase;
+}
 h4 {}
 h5 {}
 
@@ -382,13 +387,13 @@ p { padding-bottom: 20px; }
 }
 
 
-/* -- CALENDAR,  All EVENTS, ABOUT & TERMS PAGES-- */
+/* -- CALENDAR, All EVENTS, ABOUT, TERMS CONTACT PAGES-- */
 
 #calendar{
 	width: 45%;
 	position: relative;	
 }
-#allEvents, #about, #terms {
+#allEvents, #about, #terms, #contact {
 	position: relative;
 	margin-bottom: 50px; /*pushed the footer down lower*/
 	box-shadow: 10px -3px 5px #d8d7cd;
@@ -398,7 +403,16 @@ p { padding-bottom: 20px; }
 #about p, #terms p { 
 	padding:20px; 
 }
-#about h1, #terms h1 {
+#contact p:nth-child(2) { 
+	padding:20px; 
+}
+#contact p { 
+	padding:5px 0px 0px 5px; 
+}
+#contact p:last-of-type { 
+	padding-bottom: 20px; 
+}
+#about h1, #terms h1, #contact h1 {
 	text-transform: uppercase;
 }
 
@@ -665,8 +679,15 @@ p { padding-bottom: 20px; }
 	border: 1px solid #512670;
 	border-collapse: collapse;
 }
+#contact table {
+	width: 70%;
+	color:#4e226d;
+	border: 1px solid #512670;
+	border-collapse: collapse;
+	/*padding-bottom: 40px;*/
+}
 
-#giftList table th {
+#giftList table th, #contact table th {
 	text-align: left;
 	padding: 8px 0px 0px 5px;
 	font-size: 1.4em;
@@ -677,10 +698,12 @@ p { padding-bottom: 20px; }
 	color: #7a5992;
 	opacity: .6;	
 }
-#giftList table th:first-of-type {
+#giftList table th:first-of-type,
+#contact table th:first-of-type {
 	padding-left: 15px;
 }
-#giftList table td{
+#giftList table td,
+#contact table td{
 	font-size: .9em;
 	text-transform: uppercase;
 	letter-spacing: .03em;
@@ -688,7 +711,8 @@ p { padding-bottom: 20px; }
 	border: 1px solid #dddddd;
 	background: #fdfaff;
 }
-#giftList table td:first-of-type {
+#giftList table td:first-of-type,
+#contact table td:first-of-type {
 	padding-left: 15px;
 }
 
