@@ -1,9 +1,8 @@
 <?php
 
-require_once "models/db.php";
-require_once "auth/authModel.php";
-require_once "auth/authView.php";
-require_once "auth/CFDump.php";
+require_once "models/authModel.php";
+require_once "models/authView.php";
+require_once "models/CFDump.php";
 
 
 $model = new authModel(MY_DSN, MY_USER, MY_PASS);

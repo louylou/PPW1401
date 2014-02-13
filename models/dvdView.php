@@ -1,5 +1,7 @@
 <?php
 
+//should be the controller
+
 class dvdView { //this class is responsible for presenting the data from the model
 
 	public function showHeader($pageTitle = '') {
@@ -15,7 +17,7 @@ class dvdView { //this class is responsible for presenting the data from the mod
 	
 	public function showLatest($rows) {
 		
-		include "views/latestDvds.inc"; #this would be the grouphome page
+		include "views/latestDvds.inc"; //this would be the grouphome page
 		
 	}//end show Latest
 	
@@ -37,3 +39,5 @@ class dvdView { //this class is responsible for presenting the data from the mod
 }//end dvdView
 
 ?>
+
+

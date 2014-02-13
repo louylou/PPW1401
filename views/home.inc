@@ -37,12 +37,12 @@
 				<input type="text" name="lastName" id="lastName" placeholder="" min="1" max="100" size="75">
 			</p>
 			<p>
-				<label for="email">Email: </label>
-				<input type="text" name="email" id="email" placeholder="" min="1" max="100" size="75">
+				<label for="accountEmail">Email: </label>
+				<input type="text" name="accountEmail" id="accountEmail" placeholder="" min="1" max="100" size="75">
 			</p>
 			<p>
-				<label for="password">Password: </label>
-				<input type="password" name="password" id="password" placeholder="" min="1" max="100" size="75">
+				<label for="accountPassword">Password: </label>
+				<input type="password" name="accountPassword" id="accountPassword" placeholder="" min="1" max="100" size="75">
 			</p>	
 			<p>	
 				<input type="submit" name="submit" />

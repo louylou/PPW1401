@@ -1,6 +1,6 @@
 	<footer>
 		<ul>
-			<li>Perfect For Me <span>&copy;</span> 2014 Lea DiGiannurio</li>
+			<li>Perfect For Me <span>&copy;</span> <?php echo date('Y') ?> Lea DiGiannurio</li>
 			<li><a href ="terms.html">Terms</a></li>
 		</ul>
 	</footer>
